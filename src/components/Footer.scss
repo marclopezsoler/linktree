@@ -1,0 +1,19 @@
+@import "../assets/Variables.scss";
+
+.footer_text,
+.footer_name {
+  color: $green;
+  text-decoration: none;
+  font-family: $font-texts;
+  font-size: 16px;
+  transition: 0.15s ease-out;
+
+  .footer_name:hover {
+    color: white;
+  }
+}
+
+span {
+  position: relative;
+  bottom: 20px;
+}
