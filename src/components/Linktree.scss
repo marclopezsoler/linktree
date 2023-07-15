@@ -1,5 +1,14 @@
 @import "../assets/Variables.scss";
 
+.linkTreeContent {
+  user-select: none;
+  pointer-events: auto;
+}
+
+.unselectable {
+  pointer-events: none;
+}
+
 .section_1 {
   padding-top: 10px;
 }
@@ -7,7 +16,7 @@
 .section_2 {
   padding-top: 10px;
   gap: 20px;
-  padding-bottom: 5%;
+  padding-bottom: 50px;
 }
 
 .linkTree {

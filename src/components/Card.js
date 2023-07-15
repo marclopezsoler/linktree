@@ -2,7 +2,15 @@ import "./Card.scss";
 import dots from "../assets/dots.svg";
 import { isMobile } from "react-device-detect";
 
-function Card({ img, name, url }) {
+function Card({ img, name, url, handleDotsClick }) {
+
+  const dotsUrl = url;
+
+  const handleClick = (event) => {
+    event.preventDefault();
+   handleDotsClick(dotsUrl);
+  }
+
   if (!img) {
     img = "";
   }
@@ -22,7 +30,7 @@ function Card({ img, name, url }) {
             <img className="main_image_empty_mobile" />
           )}
           <p>{name}</p>
-          <img src={dots} className="dots_mobile" />
+          <img src={dots} className="dots_mobile" onClick={handleClick}/>
         </a>
       ) : (
         <a
@@ -37,7 +45,7 @@ function Card({ img, name, url }) {
             <img className="main_image_empty_desktop" />
           )}
           <p>{name}</p>
-          <img src={dots} className="dots_desktop" />
+          <img src={dots} className="dots_desktop" onClick={handleClick}/>
         </a>
       )}
     </>

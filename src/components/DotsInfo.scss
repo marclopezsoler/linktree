@@ -16,8 +16,15 @@
   transition: 0.25s ease-out;
   cursor: pointer;
 
+  border: 2px solid black;
+  
+  transition: 0.15s cubic-bezier(0, 0, 0.55, 1.48);
+
   &:hover {
     background-color: rgb(242.5, 242.5, 242.5);
+    -webkit-box-shadow: 7.5px 7.5px 0px 0px rgb(0, 0, 0);
+  -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
   }
 }
 

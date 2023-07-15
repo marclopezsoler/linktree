@@ -2,7 +2,8 @@
 
 .header_big_image {
   width: calc(90px + 0.390625vw);
-  padding: 5px;
+  border-radius: 100px;
+  border: 2px solid black;
 }
 
 .header_small {
