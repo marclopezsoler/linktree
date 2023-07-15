@@ -1,9 +1,5 @@
 @import "../assets/Variables.scss";
 
-section {
-  padding-top: 5%;
-}
-
 .header_big_image {
   width: calc(90px + 0.390625vw);
   padding: 5px;
@@ -17,15 +13,30 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: fixed;
   top: -100px;
+  padding: 0px 10px;
   z-index: 2;
   border: 1px solid white;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   
+}
+
+.dots_header_1{
+  border-radius: 40px;
+  background-color: white;
+  height: 25px;
+  padding: 8px;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.dots_header_2{
+  height: 40px;
+  opacity: 0;
 }
 
 .show_header {

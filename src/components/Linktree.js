@@ -1,11 +1,14 @@
 import Card from "./Card";
 import Header from "./Header";
 import "./Linktree.scss";
-import logo_image from '../assets/logo.png';
+import DotsInfo from "./DotsInfo";
+import ShareBox from "./ShareBox";
 
 function Linktree() {
   return (
     <div className="linkTree">
+      <ShareBox />
+      <DotsInfo />
       <section className="section_1">
         <Header />
       </section>

@@ -1,0 +1,26 @@
+@import "../assets/Variables.scss";
+
+.header_dots{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding-top: 25px;
+}
+
+.dots_header {
+  height: 25px;
+  border-radius: 30px;
+  background-color: white;
+  padding: 8px;
+  transition: 0.25s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(242.5, 242.5, 242.5);
+  }
+}
+
+.dots_header_2{
+   opacity: 0;
+}

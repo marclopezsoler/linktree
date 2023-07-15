@@ -1,18 +1,23 @@
 @import "../assets/Variables.scss";
 
-.section_2{
-   gap: 20px;
-   padding-bottom: 5%;
+.section_1 {
+  padding-top: 10px;
 }
 
-.linkTree{
-   min-height: calc(100vh - 25px);
-   width: 700px;
- }
+.section_2 {
+  padding-top: 10px;
+  gap: 20px;
+  padding-bottom: 5%;
+}
 
- @media only screen and (max-width: 800px) {
-   .linkTree{
-      min-height: calc(100vh - 25px);
-      width: 85vw;
-    }
- }
+.linkTree {
+  min-height: calc(100vh - 25px);
+  width: 700px;
+}
+
+@media only screen and (max-width: 800px) {
+  .linkTree {
+    min-height: calc(100vh - 25px);
+    width: 85vw;
+  }
+}
