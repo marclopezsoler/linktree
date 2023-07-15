@@ -1,6 +1,7 @@
 import Card from "./Card";
 import Header from "./Header";
 import "./Linktree.scss";
+import logo_image from '../assets/logo.png';
 
 function Linktree() {
   return (
@@ -9,12 +10,11 @@ function Linktree() {
         <Header />
       </section>
       <section className="section_2">
-        <Card name={"website portfolio"} url={"https://marclopez.oddsolutionslab.com"}/>
-        <Card name={"github"} />
-        <Card name={"cards"} />
-        <Card name={"yes"} />
-        <Card name={"doing"} />
-        <Card name={"problems"} />
+        <Card img={""} name={"🖥️ website portfolio"} url={"https://marclopez.oddsolutionslab.com"}/>
+        <Card img={""} name={"🛠️ github"} url={"https://github.com/marclopezsoler"}/>
+        <Card img={""} name={"📷 instagram"} url={"https://www.instagram.com/lopezsmarc/"}/>
+        <Card img={""} name={"🐦 twitter"} url={"https://twitter.com/marclopezsoler"}/>
+        <Card img={""} name={"💼 linkedin"} url={"https://www.linkedin.com/in/marc-l%C3%B3pez-soler-aab6b81a3/"}/>
       </section>
     </div>
   );

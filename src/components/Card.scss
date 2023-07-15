@@ -1,13 +1,15 @@
 @import "../assets/Variables.scss";
 
-.card {
-  padding: 1%;
+//MOBILE VIEW
+
+.card_mobile {
+  padding: 10px;
   background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  height: 35px;
+  justify-content: space-between;
+  height: 40px;
   width: 100%;
   margin-left: 20px;
   margin-right: 20px;
@@ -19,11 +21,91 @@
 
   &:hover {
     transform: scale(1.05);
+    color: rgb(24, 86, 255);
   }
+}
+
+.main_image_mobile{
+  height: 40px;
+}
+
+.main_image_empty_mobile{
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+}
+
+.dots_mobile{
+  height: 20px;
+  border-radius: 25px;
+  padding: 12px;
+  transition: 0.25s ease-out;
+  position: relative;
+  right: 0;
+
+    &:hover{
+      background-color: rgba(128, 128, 128, 0.25);
+      fill: rgb(24, 86, 255);
+    }
+}
+
+
+//DESKTOP VIEW
+
+.card_desktop {
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 50px;
+  transition: 0.15s cubic-bezier(0, 0, 0.55, 1.48);
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+
+  .dots_desktop{
+    opacity: 0;
+    height: 20px;
+    border-radius: 25px;
+    padding: 12px;
+    transition: 0.25s ease-out;
+    position: relative;
+    right: 0;
+  
+      &:hover{
+        background-color: rgba(128, 128, 128, 0.25);
+        fill: rgb(24, 86, 255);
+      }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    color: rgb(24, 86, 255);
+
+    .dots_desktop{
+      opacity: 1;
+    }
+  }
+}
+
+.main_image_desktop{
+  height: 40px;
+}
+
+.main_image_empty_desktop{
+  height: 40px;
+  width: 40px;
+  opacity: 0;
 }
 
 p{
   font-family: $font-texts;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
 }
