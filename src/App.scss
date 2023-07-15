@@ -1,10 +1,14 @@
 @import "./assets/Variables.scss";
 
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient($green, $blue);
+  background: linear-gradient($green, $greenDark);
   background-size: cover;
   background-attachment: fixed;
 }

@@ -5,6 +5,7 @@ function Header() {
   const user = "@lopezsmarc";
   const name = "";
   // const name = "Marc López Soler";
+
   return (
     <>
       <img src={logo_image} />
