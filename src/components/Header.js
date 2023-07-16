@@ -3,10 +3,16 @@ import logo_image from "../assets/logo.png";
 import dots from "../assets/dots.svg";
 import { useEffect } from "react";
 
-function Header() {
+function Header({handleDotsClick}) {
   const user = "@lopezsmarc";
   const name = "";
   // const name = "Marc López Soler";
+
+  const dotsUrl = "links.oddsolutionslab.com";
+
+  const handleClick = () => {
+    handleDotsClick(dotsUrl);
+  };
 
   useEffect(() => {
     const header = document.querySelector(".header_small");
@@ -35,7 +41,7 @@ function Header() {
         {name == "" ? null : <span>{name}</span>}
       </>
       <div className="header_small">
-        <img src={dots} className="dots_header_1" />
+        <img src={dots} className="dots_header_1" onClick={handleClick}/>
         <img src={logo_image} className="header_small_image" />
         <img src={dots} className="dots_header_2" />
       </div>

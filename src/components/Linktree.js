@@ -20,7 +20,7 @@ function Linktree() {
       <div className={boxState ? "linkTreeContent unselectable" : "linkTreeContent"}>
         <DotsInfo handleDotsClick={handleDotsClick}/>
         <section className="section_1">
-          <Header />
+          <Header handleDotsClick={handleDotsClick}/>
         </section>
         <section className="section_2">
           <Card img={""} name={"🖥️ website portfolio"} url={"https://marclopez.oddsolutionslab.com"} handleDotsClick={handleDotsClick}/>

@@ -1,12 +1,18 @@
 @import "../assets/Variables.scss";
 
-.header_dots{
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-   padding-top: 25px;
+.header_dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
 }
+
+.dots_header_2 {
+  opacity: 0;
+}
+
+//DESKTOP
 
 .dots_header {
   height: 25px;
@@ -17,17 +23,35 @@
   cursor: pointer;
 
   border: 2px solid black;
-  
+
   transition: 0.15s cubic-bezier(0, 0, 0.55, 1.48);
 
   &:hover {
     background-color: rgb(242.5, 242.5, 242.5);
     -webkit-box-shadow: 7.5px 7.5px 0px 0px rgb(0, 0, 0);
-  -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0, 0);
-  box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
+    -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
   }
 }
 
-.dots_header_2{
-   opacity: 0;
+//MOBILE
+
+.dots_header_mobile {
+  height: 25px;
+  border-radius: 30px;
+  background-color: white;
+  padding: 8px;
+  transition: 0.25s ease-out;
+  cursor: pointer;
+  -webkit-box-shadow: 7.5px 7.5px 0px 0px rgb(0, 0, 0);
+  -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
+
+  border: 2px solid black;
+
+  transition: 0.15s cubic-bezier(0, 0, 0.55, 1.48);
+
+  &:hover {
+    background-color: rgb(242.5, 242.5, 242.5);
+  }
 }
