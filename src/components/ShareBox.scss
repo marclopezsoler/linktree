@@ -1,32 +1,190 @@
 @import "../assets/Variables.scss";
 
-.share_box {
-  opacity: 1;
-  margin: auto;
-  position: absolute;
+.share_bg{
+  background-color: rgba(0, 0, 0, 0.496);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  width: fit-content;
-  height: 90vh;
+  z-index: 4;
+}
+
+.share_box, .share_box_mobile {
+  opacity: 1;
+  margin: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  height: fit-content;
+  overflow-y: auto;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 1);
   border: 2px solid black;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  padding: 10px 10px 10px 10px;
   z-index: 5;
+  overflow-y: auto;
 }
 
-.share_bg{
-  background-color: rgba(0, 0, 0, 0.496);
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 4;
+.share_box{
+  width: 20vw;
+}
+
+.share_box_mobile{
+  width: 90vw;
+}
+
+.first_row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0px;
+
+  img{
+    width: 16px;
+  }
+
+  p{
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .figure{
+    width: 100%;
+  }
+}
+
+.cross_parent_hidden{
+  opacity: 0;
+  background-color: transparent;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 20px;
+  transition: 0.25s ease-out;
+  margin: 0;
+}
+
+.cross_parent{
+  cursor: pointer;
+  background-color: transparent;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 20px;
+  transition: 0.25s ease-out;
+  margin: 0;
+}
+
+.cross_parent:hover{
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.share_buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.copy_link_parent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+  
+  &:hover{
+    background-color: rgb(235, 235, 235);
+  }
+
+  p{
+    margin-right: 6px;
+  }
+}
+
+.copy_link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.link_icon{
+  width: 20px;
+}
+
+.link{
+  font-weight: 400;
+}
+
+.active{
+  color: green;
+}
+
+@media only screen and (max-width: 1300px) {
+  .share_box{
+    width: 25vw;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .share_box{
+    width: 33vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .share_box{
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .share_box{
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .share_box{
+    width: 66vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .share_box{
+    width: 90vw;
+  }
+
+  .copy_link_parent{
+    flex-direction: column;
+    height: fit-content;
+  }
 }
