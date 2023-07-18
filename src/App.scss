@@ -1,5 +1,9 @@
 @import "./assets/Variables.scss";
 
+html{
+  background: linear-gradient($green, $greenDark);
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -8,7 +12,6 @@
   text-align: center;
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient($green, $greenDark);
   background-size: cover;
   background-attachment: fixed;
 }
