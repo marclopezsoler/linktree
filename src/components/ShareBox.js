@@ -3,7 +3,7 @@ import cross from "../assets/cross.svg";
 import "./ShareBox.scss";
 import SocialShareButton from "./SocialShareButton";
 import link from "../assets/link.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ShareBox({ handleDotsClick, url }) {
   const facebookLink =
@@ -32,6 +32,26 @@ function ShareBox({ handleDotsClick, url }) {
     }
   }
 
+  const initialLink = url;
+  const maxShortenedLink = 37;
+  const [shortenedLink, setShortenedLink] = useState('');
+
+  const updateShortenedLink = () => {
+    const windowWidth = window.innerWidth;
+
+    if(windowWidth > 1300){
+      setShortenedLink(initialLink.substr(0, maxShortenedLink - 14));
+    } else if(windowWidth <= 1300 && windowWidth > 650){
+      setShortenedLink(initialLink.substr(0, maxShortenedLink - 20));
+    } else if(windowWidth <= 650 && windowWidth > 400){
+      setShortenedLink(initialLink.substr(0, maxShortenedLink - 26));
+    } else if(windowWidth <= 400 && windowWidth > 250){
+      setShortenedLink(initialLink.substr(0, maxShortenedLink - 16));
+    } else{
+      setShortenedLink(initialLink.substr(0, maxShortenedLink - 20));
+    }
+  }
+
   const handleCopyClick = () => {
     copyTextToClipboard(url)
       .then(() => {
@@ -44,6 +64,15 @@ function ShareBox({ handleDotsClick, url }) {
         console.log(err);
       });
   };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateShortenedLink);
+    return () => window.removeEventListener('resize', updateShortenedLink);
+  }, []);
+
+  useEffect(() => {
+    updateShortenedLink();
+  }, []);
 
   return (
     <>
@@ -73,11 +102,11 @@ function ShareBox({ handleDotsClick, url }) {
               <div className="copy_link_parent" onClick={handleCopyClick}>
                 <div className="copy_link">
                   <img src={link} className="link_icon" />
-                  {url.length >= 20 ? (
+                  {/* {url.length >= 20 ? (
                     <p className="link">{url.substring(0, 20)}...</p>
-                  ) : (
-                    <p className="link">{url}</p>
-                  )}
+                  ) : ( */}
+                    <p className="link">{shortenedLink}...</p>
+                  {/* )} */}
                 </div>
                 <p className={isCopied ? "active" : ""}>
                   {isCopied ? "Copied!" : "Copy"}
