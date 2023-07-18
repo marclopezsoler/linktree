@@ -4,7 +4,7 @@
 
 .card_mobile {
   padding: 10px;
-  background-color: white;
+  background-color: $blue;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,20 +14,13 @@
   margin-left: 10px;
   margin-right: 10px;
   transition: 0.15s cubic-bezier(0, 0, 0.55, 1.48);
-  color: black;
+  color: $green;
   text-decoration: none;
   cursor: pointer;
-  -webkit-box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
-    -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
-    box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
-
-  border: 2px solid black;
-
   transition: 0.15s cubic-bezier(0, 0, 0.55, 1.48);
 
   &:hover {
     transform: scale(1.05);
-    color: rgb(24, 86, 255);
   }
 }
 
@@ -48,17 +41,13 @@
   transition: 0.25s ease-out;
   position: relative;
   right: 0;
-
-  &:hover {
-    background-color: rgba(128, 128, 128, 0.25);
-  }
 }
 
 //DESKTOP VIEW
 
 .card_desktop {
   padding: 10px;
-  background-color: white;
+  background-color: $blue;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -67,12 +56,9 @@
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
-  color: black;
+  color: $green;
   text-decoration: none;
   cursor: pointer;
-
-  border: 2px solid black;
-
   transition: 0.15s cubic-bezier(0, 0, 0.55, 1.48);
 
   .dots_desktop {
@@ -80,21 +66,17 @@
     height: 20px;
     border-radius: 25px;
     padding: 12px;
-    transition: 0.25s ease-out;
     position: relative;
     right: 0;
+    transition: 0.25s ease-out;
 
-    &:hover {
-      background-color: rgba(128, 128, 128, 0.25);
+    &:hover{
+      transform: scale(1.25);
     }
   }
 
   &:hover {
     transform: scale(1.05);
-    color: rgb(24, 86, 255);
-    -webkit-box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
-    -moz-box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
-    box-shadow: 7.5px 7.5px 0px 0px rgba(0, 0, 0);
 
     .dots_desktop {
       opacity: 1;

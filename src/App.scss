@@ -1,7 +1,10 @@
 @import "./assets/Variables.scss";
 
 html{
-  background: linear-gradient($green, $greenDark);
+  background: url('./assets/bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App {

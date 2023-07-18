@@ -23,11 +23,11 @@ function Linktree() {
           <Header handleDotsClick={handleDotsClick}/>
         </section>
         <section className="section_2">
-          <Card img={""} name={"🖥️ website portfolio"} url={"https://marclopez.oddsolutionslab.com"} handleDotsClick={handleDotsClick}/>
-          <Card img={""} name={"🛠️ github"} url={"https://github.com/marclopezsoler"} handleDotsClick={handleDotsClick}/>
-          <Card img={""} name={"📷 instagram"} url={"https://www.instagram.com/lopezsmarc/"} handleDotsClick={handleDotsClick}/>
-          <Card img={""} name={"🐦 twitter"} url={"https://twitter.com/marclopezsoler"} handleDotsClick={handleDotsClick}/>
-          <Card img={""} name={"💼 linkedin"} url={"https://www.linkedin.com/in/marc-l%C3%B3pez-soler-aab6b81a3/"} handleDotsClick={handleDotsClick}/>
+          <Card img={""} name={"PORTFOLIO"} url={"https://marclopez.oddsolutionslab.com"} handleDotsClick={handleDotsClick}/>
+          <Card img={""} name={"GITHUB"} url={"https://github.com/marclopezsoler"} handleDotsClick={handleDotsClick}/>
+          <Card img={""} name={"instagram"} url={"https://www.instagram.com/lopezsmarc/"} handleDotsClick={handleDotsClick}/>
+          <Card img={""} name={"twitter"} url={"https://twitter.com/marclopezsoler"} handleDotsClick={handleDotsClick}/>
+          <Card img={""} name={"linkedin"} url={"https://www.linkedin.com/in/marc-l%C3%B3pez-soler-aab6b81a3/"} handleDotsClick={handleDotsClick}/>
         </section>
       </div>
     </div>

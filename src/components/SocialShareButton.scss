@@ -3,7 +3,7 @@
 .social_button_parent {
   text-decoration: none;
   cursor: pointer;
-  color: black;
+  color: $blue;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,10 +15,18 @@
   padding: 8px;
   height: 40px;
   border-radius: 10px;
-  transition: 0.25s ease-out;
+  transition: 0.2s ease-out;
 
   &:hover {
-    background-color: rgb(235, 235, 235);
+    background-color: $green;
+    filter: invert(0.075);    
+    transform: scale(1.035);
+
+    .arrow {
+      translate: 0px;
+      transform: scale(1);
+      transform: translateX(5);
+    }
   }
 }
 
@@ -43,5 +51,8 @@
 }
 
 .arrow {
+  translate: -75px;
+  transform: scale(0);
   width: 20px;
+  transition: 0.2s ease-out;
 }

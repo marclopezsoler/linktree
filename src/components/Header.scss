@@ -1,16 +1,14 @@
 @import "../assets/Variables.scss";
 
 .header_big_image {
-  width: calc(90px + 0.390625vw);
+  width: calc(120px + 0.390625vw);
   border-radius: 100px;
-  border: 2px solid black;
 }
 
 .header_small {
   width: 90vw;
   border-radius: 50px;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,20 +17,20 @@
   top: -100px;
   padding: 0px 10px;
   z-index: 2;
-  border: 1px solid white;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid $blue;
+  background-color: rgba(72, 72, 72, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   
 }
 
 .dots_header_1{
   border-radius: 40px;
-  background-color: white;
+  background-color: $blue;
   height: 25px;
   padding: 8px;
   cursor: pointer;
-  filter: invert(1);
 }
 
 .dots_header_2{
@@ -74,6 +72,7 @@
 h1 {
   font-size: calc(18px + 0.390625vw);
   font-family: $font-titles;
+  font-weight: 600;
   color: $blue;
   overflow: hidden;
   white-space: nowrap;

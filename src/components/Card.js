@@ -29,7 +29,7 @@ function Card({ img, name, url, handleDotsClick }) {
           ) : (
             <img className="main_image_empty_mobile" />
           )}
-          <p>{name}</p>
+          <p>{name.toUpperCase()}</p>
           <img src={dots} className="dots_mobile" onClick={handleClick}/>
         </a>
       ) : (
@@ -44,7 +44,7 @@ function Card({ img, name, url, handleDotsClick }) {
           ) : (
             <img className="main_image_empty_desktop" />
           )}
-          <p>{name}</p>
+          <p>{name.toUpperCase()}</p>
           <img src={dots} className="dots_desktop" onClick={handleClick}/>
         </a>
       )}

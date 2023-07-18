@@ -34,23 +34,23 @@ function ShareBox({ handleDotsClick, url }) {
 
   const initialLink = url;
   const maxShortenedLink = 37;
-  const [shortenedLink, setShortenedLink] = useState('');
+  const [shortenedLink, setShortenedLink] = useState("");
 
   const updateShortenedLink = () => {
     const windowWidth = window.innerWidth;
 
-    if(windowWidth > 1300){
+    if (windowWidth > 1300) {
       setShortenedLink(initialLink.substr(0, maxShortenedLink - 14));
-    } else if(windowWidth <= 1300 && windowWidth > 650){
+    } else if (windowWidth <= 1300 && windowWidth > 650) {
       setShortenedLink(initialLink.substr(0, maxShortenedLink - 20));
-    } else if(windowWidth <= 650 && windowWidth > 400){
+    } else if (windowWidth <= 650 && windowWidth > 400) {
       setShortenedLink(initialLink.substr(0, maxShortenedLink - 26));
-    } else if(windowWidth <= 400 && windowWidth > 250){
+    } else if (windowWidth <= 400 && windowWidth > 250) {
       setShortenedLink(initialLink.substr(0, maxShortenedLink - 16));
-    } else{
+    } else {
       setShortenedLink(initialLink.substr(0, maxShortenedLink - 20));
     }
-  }
+  };
 
   const handleCopyClick = () => {
     copyTextToClipboard(url)
@@ -66,8 +66,8 @@ function ShareBox({ handleDotsClick, url }) {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', updateShortenedLink);
-    return () => window.removeEventListener('resize', updateShortenedLink);
+    window.addEventListener("resize", updateShortenedLink);
+    return () => window.removeEventListener("resize", updateShortenedLink);
   }, []);
 
   useEffect(() => {
@@ -83,7 +83,7 @@ function ShareBox({ handleDotsClick, url }) {
               <figure className="cross_parent_hidden">
                 <img src={cross} className="cross_icon" />
               </figure>
-              <p>Share this link</p>
+              <p className="share_title">Share this link</p>
               <figure className="cross_parent">
                 <img
                   src={cross}
@@ -102,13 +102,9 @@ function ShareBox({ handleDotsClick, url }) {
               <div className="copy_link_parent" onClick={handleCopyClick}>
                 <div className="copy_link">
                   <img src={link} className="link_icon" />
-                  {/* {url.length >= 20 ? (
-                    <p className="link">{url.substring(0, 20)}...</p>
-                  ) : ( */}
-                    <p className="link">{shortenedLink}...</p>
-                  {/* )} */}
+                  <p className="link">{shortenedLink}...</p>
                 </div>
-                <p className={isCopied ? "active" : ""}>
+                <p className={isCopied ? "active linkWord" : "linkWord"}>
                   {isCopied ? "Copied!" : "Copy"}
                 </p>
               </div>
